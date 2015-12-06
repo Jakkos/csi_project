@@ -8,6 +8,7 @@
 
  	include("connexion.php");
 
+<<<<<<< HEAD
  	if ($conn) {
  		//echo 'Connexion OK';
  		//$req = "sp_help";
@@ -47,6 +48,14 @@ $result = odbc_exec($conn,$req);
   print_r($data);
 
  
+=======
+if ($conn) {
+ 	echo 'Connexion OK';
+ 	$req="select NOMRUE from adresse ";
+ 	$result = odbc_exec($conn, $req);
+ 	while ($data[]=odbc_fetch_array($result));
+ 	print_r($data);
+>>>>>>> origin/site
  	//$query = file_get_contents("appartements.sql");
 	//odbc_exec($conn, $query)or die(odbc_error());
 }
